@@ -1,3 +1,20 @@
+****
+Verbos HTTP:
+GET : Pegar - aqui eu vou solicitar algo a uma pagina, e o criterios são abertos, 
+as rotas são utilizada para consultas.
+
+POST : Postar - eu envio informações "envelopadas ou protegidas" dentro de um requisição
+ao servidor.
+
+PUT OU UPDATE : Atualizar registro, ele vai passar id do registro que voce quer atualizar, 
+e envia informações "envelopadas ou protegidas" dos dados que voce quer atualizar
+
+DELETE : Remove o registro que voce quer destruir no banco de dados. Aqui voce passar via url
+a id do registro.
+
+OPTION : que vai verificar a disponibilidade do objeto.
+***
+
 Criar uma pasta com o nome do projeto.
 Abrir esta pasta.
 Criar uma pasta chamada frontend
@@ -9,7 +26,15 @@ Selecionar a Pasta que sera utilizado.
 Projeto backend
 
 Crie as Pastas
-Models: sera utilizado para armazenar os modelos do nosso projeto
-Controllers: classes responsaveis por salvar e processar regras de negocio.
+models: sera utilizado para armazenar os modelos do nosso projeto
+controllers: classes responsaveis por salvar e processar regras de negocio.
+db: Classe responsavel pelo banco de dados (Conexão)
+routes: Rotas que o fluxo de informação deve seguir no sistema
+
 
 Clicar em Terminal > Novo Terminal
+
+Digita a sequencia
+
+1 - npm initi -y
+2 - npm install express mongoose dotenv cors
