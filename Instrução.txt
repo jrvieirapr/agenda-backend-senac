@@ -1,0 +1,15 @@
+Criar uma pasta com o nome do projeto.
+Abrir esta pasta.
+Criar uma pasta chamada frontend
+Criar uma pasta chamada backend
+Abrir o Visual Code
+Ir em Abrir Pasta
+Selecionar a Pasta que sera utilizado.
+
+Projeto backend
+
+Crie as Pastas
+Models: sera utilizado para armazenar os modelos do nosso projeto
+Controllers: classes responsaveis por salvar e processar regras de negocio.
+
+Clicar em Terminal > Novo Terminal
