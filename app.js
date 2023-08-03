@@ -1,3 +1,5 @@
+//Importação padrao JS
+//import apelido from 'endereco do arquivo'
 //Servidor Backend
 const express = require('express')
 
