@@ -38,3 +38,15 @@ npm install --save-dev nodemon
 ## Observações
 -**Instação GLobal**: -g ou -global para instalação global - no pc e não no projeto.
 -**Instalar somente desenvolvedor**: --save-dev ambiente de desenvolvimento.
+
+##Configurando o nodemon
+
+-**express**: O Express é um framework web para Node.js que simplifica a criação de aplicativos e APIs. Ele oferece uma abordagem minimalista e flexível para lidar com rotas, middleware e gerenciamento de requisições e respostas HTTP.
+
+-**nodemon**: é uma ferramenta que ajuda no desenvolvimento de aplicações Node.js. Ele é uma abreviação de "Node Monitor" e tem como objetivo monitorar os arquivos de sua aplicação em tempo real e reiniciar automaticamente o servidor sempre que houver alterações no código fonte.
+
+-**mongoose**: O Mongoose é uma biblioteca do MongoDB para Node.js que fornece uma camada de abstração para interagir com o banco de dados MongoDB. Ele simplifica a criação de modelos, validação de dados e consultas ao banco de dados.
+
+-**dotenv**: O Dotenv é uma biblioteca que permite carregar variáveis de ambiente a partir de um arquivo .env no seu projeto. Isso é útil para armazenar informações sensíveis, como chaves de API, senhas ou configurações específicas do ambiente de desenvolvimento.
+
+-**cors**: O Cors é uma biblioteca utilizada para habilitar o controle de acesso de recursos de outros domínios ao servidor através da política de mesma origem (CORS). Ele é útil quando seu aplicativo precisa ser acessado de diferentes domínios ou quando está sendo desenvolvido um aplicativo frontend separado.
