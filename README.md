@@ -36,7 +36,7 @@ npm install --save-dev nodemon
 ```
 
 ## Observações
--**Instação GLobal**: -g ou -global para instalação global - no pc e não no projeto.
+-**Instalação global**: -g ou -global para instalação global - no pc e não no projeto.
 -**Instalar somente desenvolvedor**: --save-dev ambiente de desenvolvimento.
 
 ##Configurando o nodemon
