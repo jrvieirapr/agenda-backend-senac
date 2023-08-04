@@ -1,0 +1,1 @@
+let dicionario = {nome:"Teste", apeliddo:"Teste 2"}

@@ -25,16 +25,33 @@ Selecionar a Pasta que sera utilizado.
 
 Projeto backend
 
-Crie as Pastas
-models: sera utilizado para armazenar os modelos do nosso projeto
-controllers: classes responsaveis por salvar e processar regras de negocio.
-db: Classe responsavel pelo banco de dados (Conexão)
-routes: Rotas que o fluxo de informação deve seguir no sistema
-
-
 Clicar em Terminal > Novo Terminal
 
 Digita a sequencia
 
 1 - npm initi -y
 2 - npm install express mongoose dotenv cors
+3 - npm install --save-dev nodemon
+*** -g para instalação global - no pc e não no projeto
+*** --save-dev ambiente de desenvolvimento
+*** -i abreviação do install 
+
+Abrir arquivo package.json e insira dentro do item scripts
+"start": "nodemon app.js"
+
+Crie a estrutura de pastas para o sistema.
+
+Crie as Pastas
+models: sera utilizado para armazenar os modelos do nosso projeto
+controllers: classes responsaveis por salvar e processar regras de negocio.
+db: Classe responsavel pelo banco de dados (Conexão)
+routes: Rotas que o fluxo de informação deve seguir no sistema
+
+Crie o arquivo app.js.
+Abra o arquivo e importe as bibliotecas necessarias.
+Configure o uso.
+Crie o Listen para inicializar o servidor.
+
+
+
+

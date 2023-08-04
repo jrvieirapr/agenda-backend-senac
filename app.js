@@ -14,3 +14,13 @@ app.use(cors)
 
 //Trabalhar com json
 app.use(express.json())
+
+
+// Inicializar o Servidor
+//digitar no terminal npm start
+app.listen(3000, function () {
+    console.log(`Servidor Online!!`)
+})
+
+//.\user
+//senac123456
