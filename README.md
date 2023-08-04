@@ -33,6 +33,7 @@ Este é um sistema de agenda que permite criar, atualizar, listar e remover even
 npm init -y
 npm install express mongoose dotenv cors
 npm install --save-dev nodemon
+```
 
 ## Observações
 -**Instação GLobal**: -g ou -global para instalação global - no pc e não no projeto
