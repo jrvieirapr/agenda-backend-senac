@@ -27,14 +27,13 @@ Este é um sistema de agenda que permite criar, atualizar, listar e remover even
 1. Abra o Visual Studio Code e selecione a pasta do projeto.
 2. Clique em "Terminal" e selecione "Novo Terminal".
 3. No terminal, digite os seguintes comandos para instalar as bibliotecas do backend:
+-**Instação**: npm -i ou -install para instalação
 
 ```bash
 npm init -y
 npm install express mongoose dotenv cors
 npm install --save-dev nodemon
 
-
 ## Observações
-*** -g para instalação global - no pc e não no projeto
-*** --save-dev ambiente de desenvolvimento
-*** -i abreviação do install 
+-**Instação GLobal**: -g ou -global para instalação global - no pc e não no projeto
+-**Instalar somente desenvolvedor**: --save-dev ambiente de desenvolvimento
