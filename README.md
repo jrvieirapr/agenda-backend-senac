@@ -39,7 +39,7 @@ npm install --save-dev nodemon
 -**Instalação global**: -g ou -global para instalação global - no pc e não no projeto.
 -**Instalar somente desenvolvedor**: --save-dev ambiente de desenvolvimento.
 
-##Configurando o nodemon
+## Configurando o nodemon
 
 -**express**: O Express é um framework web para Node.js que simplifica a criação de aplicativos e APIs. Ele oferece uma abordagem minimalista e flexível para lidar com rotas, middleware e gerenciamento de requisições e respostas HTTP.
 
