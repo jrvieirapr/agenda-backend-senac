@@ -1,6 +1,6 @@
 # Sistema de Agenda
 
-![Projeto Preview](https://pt.wikipedia.org/wiki/JavaScript#/media/Ficheiro:Unofficial_JavaScript_logo_2.svg)
+![Projeto Preview](https://logospng.org/wp-content/uploads/javascript.png)
 
 ## Descrição
 
