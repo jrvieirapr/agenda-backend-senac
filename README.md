@@ -1,7 +1,5 @@
 # Sistema de Agenda
 
-![Projeto Preview](https://logospng.org/wp-content/uploads/javascript.png)
-
 ## Descrição
 
 Este é um sistema de agenda que permite criar, atualizar, listar e remover eventos através de uma API RESTful.
@@ -34,4 +32,9 @@ Este é um sistema de agenda que permite criar, atualizar, listar e remover even
 npm init -y
 npm install express mongoose dotenv cors
 npm install --save-dev nodemon
-´´´
+
+
+## Observações
+*** -g para instalação global - no pc e não no projeto
+*** --save-dev ambiente de desenvolvimento
+*** -i abreviação do install 
