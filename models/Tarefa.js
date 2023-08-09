@@ -1,8 +1,10 @@
-//Importar o Moongose
+//Importar o Moongose driver do MongoDB
+//npm install mongoose
+//para cada banco de dados existe um driver
 const mongoose = require('mongoose')
 
 //Importar Situacao
-const { situacaoSchema } = require('Situacao')
+const { situacaoSchema } = require('./Situacao')
 //Extrair o schema
 const { Schema } = mongoose
 //Criar o modelo
@@ -12,7 +14,7 @@ const tarefaSchema = new Schema({
         required: true
     },
     data :{
-        type: Date,
+        type: Date, //tipo: data
         required: true
     },
     descricao :{
@@ -24,7 +26,7 @@ const tarefaSchema = new Schema({
         required: true
     },
     situacao :{
-        type: [situacaoSchema],
+        type: [situacaoSchema],//tipo situacao
         required: true
     }
 },{timestamps: true})
