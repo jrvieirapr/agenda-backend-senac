@@ -22,6 +22,10 @@ const tarefaSchema = new Schema({
     contato :{
         type: String,
         required: true
+    },
+    situacao :{
+        type: [situacaoSchema],
+        required: true
     }
 },{timestamps: true})
 //Definir o modelo no moongose
