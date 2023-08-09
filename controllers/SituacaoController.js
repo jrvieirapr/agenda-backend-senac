@@ -5,13 +5,13 @@
 //C:\Users\9310\Documents\agenda-backend\controllers
 //C:\Users\9310\Documents\agenda-backend\models
 //Visual Code - ext chamada autoimport
-const {Situacao:SituacaoModel}= require("../models/Situacao")
+const { Situacao: SituacaoModel } = require("../models/Situacao")
 
 const SituacaoController = {
 
     //CRUD
     //Criar - Create
-    create : async (req, res) => {
+    create: async (req, res) => {
         //sincrono: executa na sequencia
         //assincrono: executa em paralelo ou fora de sincronia
         //req - request o que o usuario quer ver ou salvar ou pesquisar
@@ -19,15 +19,25 @@ const SituacaoController = {
         //POST - envia dados no corpo(body) da requisição
         try {
             //tente fazer algo
-            const data = {
+            //data ou nome do modelo
+            //$data php e muito comum $data = $request->all()
+            //const data = req.body
+            const situacao = {
                 // nome: res.data.nome
                 nome: req.body.nome
             }
+            const response = await SituacaoModel.create(situacao)
+
+            res.status(201).json({response, msg:"Criado com sucesso!"})
+
         } catch (error) {
             //em caso de erro retorne
+            console.log(error)
+            res.status(400).json({msg: "Não foi possivel salvar"})
+
         }
     }
-      //Ler - Read
+    //Ler - Read
     //Atualizar - Update
     //Remover - Delete
 }
