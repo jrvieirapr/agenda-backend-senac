@@ -75,8 +75,25 @@ const SituacaoController = {
         res.status(404).json({ msg: "Situação não encontrada!" });
         return;
       }
-      res.status(200)
+      res
+        .status(200)
         .json({ situacaoAtualizada, msg: "Situação atualizada com sucesso!" });
+    } catch (error) {
+      console.log(error);
+    }
+  },
+  delete: async (req, res) => {
+    try {
+      const id = req.params.id;
+      const situacao = await SituacaoModel.findById(id);
+      if (!situacao) {
+        res.status(404).json({ msg: "Situação não encontrada!" });
+        return;
+      }
+      const situacaoDeletada= await SituacaoModel.findByIdAndDelete(id);
+      res
+        .status(200)
+        .json({ situacaoDeletada, msg: "Situação deletado com sucesso!" });
     } catch (error) {
       console.log(error);
     }
