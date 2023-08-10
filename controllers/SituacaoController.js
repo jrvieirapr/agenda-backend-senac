@@ -82,6 +82,7 @@ const SituacaoController = {
       console.log(error);
     }
   },
+  //Remover - Delete
   delete: async (req, res) => {
     try {
       const id = req.params.id;
@@ -98,7 +99,6 @@ const SituacaoController = {
       console.log(error);
     }
   },
-  //Remover - Delete
 };
 
 module.exports = SituacaoController;
