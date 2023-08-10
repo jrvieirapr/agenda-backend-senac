@@ -37,16 +37,31 @@ const SituacaoController = {
   //Ler - Read
   getAll: async (req, res) => {
     try {
-        const situacoes = SituacaoModel.find();
+        const situacoes = SituacaoModel.find()
         // response.status(200).json({data: situacoes})
         response.json(situacoes)
 
     } catch (error) {
       //em caso de erro retorne
       console.log(error);
-      res.status(400).json({ msg: "Não foi possivel executar pesquisa" });
+      res.status(400).json({ msg: "Não foi possivel executar pesquisa" })
     }
   },
+  get: async (req, res) => {
+    try {
+        const id = req.params.id
+        const situacao = await SituacaoModel.findById(id)
+        if (!situacao) {
+            res.status(404).json({ msg: "Situação não encontrada!" })
+            return;
+        }
+        res.json(situacao)
+
+    } catch (error) {
+        console.log(error)
+        res.status(400).json({ msg: "Não foi possivel executar pesquisa" })
+    }
+},
   //Atualizar - Update
   //Remover - Delete
 };
