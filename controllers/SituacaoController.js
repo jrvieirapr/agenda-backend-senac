@@ -65,11 +65,11 @@ const SituacaoController = {
     try {
       const id = req.params.id;
       const Situacao = {
-        name: req.body.name,
+        name: req.body.nome,
       };
-      const situacaoAtualizada = await StatusModel.findByIdAndUpdate(
+      const situacaoAtualizada = await SituacaoModel.findByIdAndUpdate(
         id,
-        Status
+        Situacao
       );
       if (!situacaoAtualizada) {
         res.status(404).json({ msg: "Situação não encontrada!" });
