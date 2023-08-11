@@ -23,7 +23,7 @@ const tarefaSchema = new Schema({
     },
     contato :{
         type: String,
-        required: true
+        required: true 
     },
     situacao :{
         type: [situacaoSchema],//tipo situacao
