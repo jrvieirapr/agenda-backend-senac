@@ -33,7 +33,7 @@ const SituacaoController = {
       console.log(error);
       res.status(400).json({ msg: "Não foi possivel salvar" });
     }
-  },
+  }, 
   //Ler - Read
   getAll: async (req, res) => {
     try {

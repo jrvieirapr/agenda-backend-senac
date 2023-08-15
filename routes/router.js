@@ -1,10 +1,10 @@
 const router = require("express").Router()
 
-//Statuses routes
+//Situacao routes
 const situacaoRouter = require("./situacoes")
 router.use("/",situacaoRouter)
 
-//Job routes
+//Tarefa routes
 const tarefasRouter = require("./tarefas")
 router.use("/",tarefasRouter)
 
