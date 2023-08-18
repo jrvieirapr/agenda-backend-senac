@@ -10,7 +10,7 @@ const cors = require('cors')
 const app = express()
 
 //Dizer pro app usar o que foi importado
-app.use(cors)
+app.use(cors())
 
 //Trabalhar com json
 app.use(express.json())

@@ -11,22 +11,11 @@ const SituacaoController = {
   //CRUD
   //Criar - Create
   create: async (req, res) => {
-    //sincrono: executa na sequencia
-    //assincrono: executa em paralelo ou fora de sincronia
-    //req - request o que o usuario quer ver ou salvar ou pesquisar
-    //res - response a resposta do servidor
-    //POST - envia dados no corpo(body) da requisição
     try {
-      //tente fazer algo
-      //data ou nome do modelo
-      //$data php e muito comum $data = $request->all()
-      //const data = req.body
       const situacao = {
-        // nome: res.data.nome
         nome: req.body.nome,
       };
       const response = await SituacaoModel.create(situacao);
-
       res.status(201).json({ response, msg: "Criado com sucesso!" });
     } catch (error) {
       //em caso de erro retorne
@@ -37,9 +26,9 @@ const SituacaoController = {
   //Ler - Read
   getAll: async (req, res) => {
     try {
-      const situacoes = SituacaoModel.find();
+      const situacoes = await SituacaoModel.find();
       // response.status(200).json({data: situacoes})
-      response.json(situacoes);
+      res.json(situacoes);
     } catch (error) {
       //em caso de erro retorne
       console.log(error);
@@ -56,27 +45,26 @@ const SituacaoController = {
       }
       res.json(situacao);
     } catch (error) {
-      console.log(error);
-      res.status(400).json({ msg: "Não foi possivel executar pesquisa" });
+      console.log(error);  
     }
   },
   //Atualizar - Update
   update: async (req, res) => {
     try {
       const id = req.params.id;
-      const Situacao = {
+      const situacao = {
         name: req.body.nome,
       };
-      const situacaoAtualizada = await SituacaoModel.findByIdAndUpdate(
-        id,
-        Situacao
-      );
+      const options = { new: true }; // Retorna o documento atualizado
+
+      const situacaoAtualizada = await SituacaoModel.findByIdAndUpdate(id, situacao, options);
+
       if (!situacaoAtualizada) {
         res.status(404).json({ msg: "Situação não encontrada!" });
-        return;
+        return;      
       }
-      res
-        .status(200)
+
+      res.status(200)
         .json({ situacaoAtualizada, msg: "Situação atualizada com sucesso!" });
     } catch (error) {
       console.log(error);
