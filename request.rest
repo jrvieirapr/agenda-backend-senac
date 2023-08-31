@@ -14,7 +14,7 @@ GET http://localhost:3000/api/situacoes/64deaae176a5e29bd7373187  HTTP/1.1
 content-type: application/json
 
 ###
-PUT http://localhost:3000/api/situacoes/64deaae176a5e29bd7373187  HTTP/1.1
+PUT http://localhost:3000/api/situacoes/64debee3594354fab85a2bee HTTP/1.1
 content-type: application/json
 
 {
@@ -35,10 +35,37 @@ content-type: application/json
     "descricao" :"Ligar pro Ciclano",
     "contato" :"Ciclano",
     "situacao" :  {
-    "_id": "64de93a3a744360827253b55",
-    "nome": "Cancelado",
-    "createdAt": "2023-08-17T21:39:47.586Z",
-    "updatedAt": "2023-08-17T23:54:00.134Z",
-    "__v": 0
+        "_id": "64de95436fd18c3f7fbbc81c",
+        "nome": "Pendente",
+        "createdAt": "2023-08-17T21:46:43.768Z",
+        "updatedAt": "2023-08-17T21:46:43.768Z",
+        "__v": 0
   }
 }
+
+###
+GET http://localhost:3000/api/tarefas  HTTP/1.1
+content-type: application/json
+
+###
+PUT http://localhost:3000/api/tarefas/64debd6d00c51a09b0758ec9  HTTP/1.1
+content-type: application/json
+
+{
+    "assunto" : "Ligação",
+    "data" : "2023-08-17",
+    "descricao" :"Ligar pro Ciclano",
+    "contato" :"Beltrano",
+    "situacao" :  {
+        "_id": "64de95436fd18c3f7fbbc81c",
+        "nome": "Pendente",
+        "createdAt": "2023-08-17T21:46:43.768Z",
+        "updatedAt": "2023-08-17T21:46:43.768Z",
+        "__v": 0
+  }
+}
+
+
+###
+DELETE http://localhost:3000/api/tarefas/64debd6d00c51a09b0758ec9  HTTP/1.1
+content-type: application/json

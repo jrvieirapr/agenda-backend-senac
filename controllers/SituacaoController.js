@@ -53,7 +53,7 @@ const SituacaoController = {
     try {
       const id = req.params.id;
       const situacao = {
-        name: req.body.nome,
+        nome: req.body.nome,
       };
       const options = { new: true }; // Retorna o documento atualizado
 

@@ -19,9 +19,9 @@ const TarefaController = {
       },
       getAll: async (req, res) => {
         try {
-          const tarefas = TarefaModel.find();
+          const tarefas = await TarefaModel.find();
           // response.status(200).json({data: tarefas})
-          response.json(tarefas);
+          res.json(tarefas);
         } catch (error) {
           //em caso de erro retorne
           console.log(error);
@@ -49,12 +49,14 @@ const TarefaController = {
             assunto: req.body.assunto,
             data: req.body.data,
             descricao: req.body.descricao,
-            contato: req.body.contato,
-            tarefa: req.body.tarefa,
+            contato: req.body.contato,  
+            situacao: req.body.situacao
           };
+          const options = {new: true}
           const tarefaAtualizada = await TarefaModel.findByIdAndUpdate(
             id,
-            tarefa
+            tarefa,
+            options
           );
           if (!tarefaAtualizada) {
             res.status(404).json({ msg: "Tarefa não encontrada!" });
